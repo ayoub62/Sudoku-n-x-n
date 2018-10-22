@@ -16,6 +16,8 @@ public class Main {
 		for (int i = 0; i < dim; i++) {
 			for (int j = 0; j < dim; j++) {
 				grid[i][j] = in.nextInt();
+				if(grid[i][j] != 0)
+					vis[i][j] = true;
 			}
 		}
 		solve(0, 0);
@@ -46,7 +48,6 @@ public class Main {
 		}
 
 		// chcek le carré
-
 		int rac = (int) Math.sqrt(dim);
 
 		int a = (x / rac) * rac;
