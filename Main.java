@@ -14,14 +14,8 @@ public class Main {
 		vis = new boolean[dim][dim];
 
 		for (int i = 0; i < dim; i++) {
-			String s = in.nextLine();
 			for (int j = 0; j < dim; j++) {
-				if (s.charAt(j) == '.')
-					grid[i][j] = 0;
-				else {
-					grid[i][j] = Integer.parseInt(s.charAt(j) + "");
-					vis[i][j] = true;
-				}
+				grid[i][j] = in.nextInt();
 			}
 		}
 		solve(0, 0);
@@ -51,7 +45,7 @@ public class Main {
 			}
 		}
 
-		// chcek le carré
+		// chcek le carrÃ©
 
 		int rac = (int) Math.sqrt(dim);
 
